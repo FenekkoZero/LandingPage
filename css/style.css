@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{font-family: Regalblack;
+    src: url(../fonts/Regalblack.ttf);
+    }
+    
+@font-face{font-family: Regalregular;
+    src: url(../fonts/Regalregular.ttf);
+    }
+    
+@font-face{font-family: regaldos;
+    src: url(../fonts/regaldos.otf);
+    }
+    
+@font-face{font-family: Brandon;
+    src: url(../fonts/Brandon.otf);
+    }
+
+
+
+body{
+    min-height: 100vh;
+}
+
+.fondo{background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/Image20241226154206.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 120vh;
+    background-size: cover;
+    overflow-y: hidden;
+   }
+   
+.fondito{background-image: url(../img/casa1.jpg);
+}
+
+
+
+
+/* Estilo de la Barra de Navegacion */
+nav {
+    width: 100%;
+    height: 84px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.678);
+    a{font-family: Brandon;
+        font-size: 20px;
+        text-decoration: none;
+       }
+    
+    .logos_nav{
+        display: inline-flex;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+        #logo{
+            margin-left: 50px;
+            margin-right: 10px;
+            height: 25px;
+            align-self: center;
+        }
+    
+        
+    }
+
+    #lupa_nav{
+        display: inline-block;
+        height: 25px;
+        margin-left: 15px;
+        align-self: center;
+    }
+
+    #searchbar_nav{
+        display: inline-block;
+        margin-left: 10px;
+        height: 35px;
+        width: 180%;
+        align-self: center;
+        border: solid 1px white;
+        
+        background: rgba(0, 0, 0, 0);
+        outline: none;
+        text-decoration-color: white;
+        color: white;
+        border-radius: 70px;
+        padding: 0.5vw 3vw;
+    }
+
+    .botones_nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        /* A partir de aquí se da estilo a la segunda celda del nav */
+        .botones_login{
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr;
+            align-items: center;
+
+            a{
+                justify-self: center;
+            }
+
+            #barrita_nav{
+                height: 100%;
+                width: 1px;
+                background-color: white;
+            }
+        }
+
+        .botones_lang{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+
+            img{
+                margin-right: 40px;
+            }
+        }
+    }
+        
+    
+
+}
+
+#fondo_header{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+#lux{position: absolute;
+    top: 33vw;
+    .luxury{font-family: Regalregular;
+            margin-left: 7vw;
+            color: #b4b7b7;
+            font-size: 40px;
+            font-weight: 400;
+           }
+    .real{font-family: Regaldos;
+            color: #ffffff;
+            font-size: 80px;
+            margin-left: 5.5vw;
+            margin-bottom: 2.6vw;
+           }
+    button{ 
+            height: 12vh;
+            width: 60vh;
+            margin-left: 6.3vw;
+            background-color: transparent;
+            border-radius: 50px;
+            border-color: #ffffff;
+            border: 1px solid #ffffff;
+            font-family: Brandon;
+            font-size: 30px;
+            color: #ffffff;
+            padding: 1vw;
+            img{margin: 0 3vw;
+                    align-self: center;
+                   }
+           }
+    .linea{display: inline-flexbox;
+            margin-top: 1vw;
+            margin-left: 48vw;
+           }       
+   }
+
+
+    .redes_wrapper{
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    min-height: 30vh;
+    }
+
+    .redes{display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto auto;
+    gap: 5px;
+    width: 5vw;
+    justify-items: center;
+    align-items: center;
+    top: 2vw;
+    gap: 8px;
+    padding-top: 0vw;
+    padding-left: 8vw;
+    color: #b4b7b7;
+    img{display: inline;}
+    z-index: 9;
+    }
+
+    .red{
+        height: 2vw;
+    }
+    .red_linkedin{
+        height: 1.5vw;
+    }
+    .red_fb{
+        height: 2.3vw;
+    }
+    #rayita_redes{
+        margin-top: 4vw;
+        height: 12px;
+        width: 25vw;
+        padding-right: 2vw;
+    }
+
+
+   .medio{display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2vw;
+   .derecha{display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1%;
+    position: relative;
+           img{width: 100%;
+            height: 75%;
+            object-fit: cover;
+           }
+           .prime{grid-column: span 2;}
+           .segun, .terce{grid-column: span 5;}
+           .england{transform: translateY(-100%);
+            position: absolute;
+            color: #ffffff;
+            font-family: Regalregular;
+            font-size: 30px;
+            padding: 2vw;
+           }
+           .france{transform: translateY(-100%);
+            position: absolute;
+            color: #464547;
+            background-color: #ffffff;
+            width: 50%;
+            font-family: Regalregular;
+            font-size: 30px;
+            padding: 2vw;
+            .franceti{padding-left: 3vw;}
+           }
+   }
+   .arro{
+    display: none;
+}
+   .izquierda{display: grid;
+    font-size: 60px;
+    text-align: end;
+    padding-right: 2vw;
+           .textos{font-family: Regalblack;
+                   .naranja{font-family: Regalregular;
+                    color: #df991b;
+                    font-size: 40px;
+                   }
+           }
+           .contenido{display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            align-items: center;
+                   .pre{background-color: transparent;
+                    border: none;
+                    font-family: Brandon;
+                    font-size: 20px;
+                    color: #b4b7b7;
+                    padding-left: 3vw;
+                   }
+                   .nex{background-color: transparent;
+                    border: none;
+                    font-family: Brandon;
+                    font-size: 20px;
+                    color: #df991b;
+                    padding-left: 3vw;
+                   }
+                   .vie{background-color: transparent;
+                    border-radius: 50px;
+                    border: 1px solid;
+                    font-family: Brandon;
+                    font-size: 30px;
+                    height: fit-content;
+                    padding: 1vw;
+                    margin-left: 3vw;
+                   }
+           }
+   }
+}
+
+
+.centro{padding-top: 0.5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+   h4{color: #df991b;
+    font-size: 40px;
+    font-family: Regalregular;
+   }
+   h2{font-size: 80px;
+    font-family: Regalblack;
+   }
+}
+
+
+
+
+section{display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+    row-gap: 4vw;
+    padding-bottom: 5vw;
+    margin: 2vw;
+    img{width: 100%;
+    max-height: 100%;
+    border-radius: 8px;  /* Opcional: redondear las esquinas */
+    }
+   .vienen{display: none;}
+   h5{font-family: Regalregular;
+    color: #464547;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 1vw;
+   }
+   h4{font-family: Regalblack;
+    color: #000000;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 1vw;
+   }
+}.englanddos{
+    display: none;
+}
+
+
+
+
+
+footer{width: 100%;
+    background-color: black;
+    margin-top: 2vw;
+   .gris{padding: 2vw;
+    background-color: #26282b;
+    width: 90%;
+    margin: auto;
+    transform: translateY(-10%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+           span{font-family: Regalregular;
+            font-weight: 400;
+            font-size: 40px;
+            color: #df991b;
+            justify-self: center;
+           }
+           .join{font-family: Regalregular;
+            color: white;
+            font-weight: 500;
+            font-size: 60px;
+            justify-self: center;
+           }
+           .celda{display: grid;
+            gap: 1vw;
+           }
+           label{margin-left: 3vw;
+            font-family: Brandon;
+            color: #ffffff;
+            font-size: 25px;
+           }
+           input{background-color: transparent;
+            border: solid 1px #7e7e7e;
+            border-radius: 70px;
+            padding: 0.5vw 3vw;
+            font-family: Brandon;
+            font-size: 20px;
+            color: #7e7e7e;
+            margin-right: 4vw;
+            margin-bottom: 0.5vw;
+           }
+           button{width: 50%;
+            background-color: transparent;
+            border: solid 1px #df991b;
+            border-radius: 70px;
+            padding: 0.5vw;
+            margin-right: 4vw;
+            justify-self: end;
+            font-family: Brandon;
+            font-size: 30px;
+            font-weight: 390;
+            color: #df991b;
+            align-self: center;
+           }
+   }
+   .negra{width: 100%;
+    margin: auto;
+    color: #b4b7b7;
+    font-family: Brandon;
+    font-size: 30px;
+    font-weight: 390px;
+           .pie{display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 90%;
+            margin: auto;
+                   .be{color: #ffffff;
+                    font-size: 30px;
+                    font-weight: 330px;
+                    align-self: self-end;
+                    margin-bottom: 2vw;
+                   }
+                   .su{justify-self: center;
+                    margin-bottom: 1vw;
+                   }
+                   .ho{justify-self: center;
+                    margin-bottom: 2vw;
+                    .space{margin-top: 2vw;}
+                   }
+                   .ca{text-align: right;
+                    margin-bottom: 1vw;
+                           .telef{font-size: 40px;
+                            font-family: Regalblack;
+                            margin-bottom: 2vw;
+                           }
+                   }
+                   span{color: #ffffff;
+                    font-size: 30px;
+                    font-weight: 330px;
+                   }
+            li{list-style: none;}
+           }
+           .copy{border-top: solid 2px white;
+            width: 90%;
+            margin: auto;
+                   p{text-align: center;
+                    font-family: Brandon;
+                    font-size: 20px;
+                    font-weight: 450;
+                    color: #ffffff;
+                    margin: 2vw 0;
+                    padding-bottom: 1vw;
+                   }
+           }
+   }
+}

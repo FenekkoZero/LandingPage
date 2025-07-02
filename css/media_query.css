@@ -1,0 +1,232 @@
+/* Inicio de los Media Query */
+@media (max-width: 800px) {
+   /* html{ /* Cambio el color de fondo para saber cuando la vista cambia a mobile, solo por depuracion*/ 
+        /*background-color: red;
+    } */
+
+
+    .fondo{display: none;}
+
+    .fondito{width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        background-size: cover;
+        }
+
+
+
+
+    nav{
+        width: 100vw;
+        height: 22vw;
+        align-items: center;
+        
+        #logo{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-left: 0px;
+            content:url("../img/logo_round.png");
+        }
+
+        #lupa_nav{
+            display: inline-block;
+            height: 25px;
+            margin-left: 15px;
+            align-self: center;
+        }
+
+        #searchbar_nav{
+            display: inline-block;
+            margin-left: 10px;
+            height: 35px;
+            width: 180%;
+            align-self: center;
+            border: solid 1px white;
+            border-radius: 5%;
+            background: rgba(0, 0, 0, 0);
+            outline: none;
+            text-decoration-color: white;
+            color: white;
+        
+        }
+
+        .logos_nav{
+            display: inline-flex;
+            grid-template-columns: 1fr 1fr 1px;
+        }
+
+        
+        .botones_nav{
+            
+            grid-template-columns: 1fr;
+            .botones_login{ /* Desaparecer los links de usuario en vista mobile*/
+                display: none;
+            }
+        
+            .botones_lang{ /* Desaparecer los botones de cambio de idioma en mobile */
+                grid-template-columns: 1fr;
+                justify-items: end;
+                
+                a{
+                    display: none;
+                }
+
+                
+            }
+        }
+    }
+
+
+    #lux{ top: 90vw;
+        .luxury{font-size: 40px;}
+        .real{font-family: Regalregular;
+         font-size: 50px;
+        }
+        button{
+        font-size: 25px;
+        margin-left: 5vh;
+        margin-top: 3vh;
+        height: 10vh;
+        width: 40vh; 
+        img{display: none;}
+        }
+        .linea{margin-top: 10vw;
+        margin-left: 35vw;} 
+        }
+
+.medio{grid-template-columns: 1fr;
+    padding-top: 0%;
+           .derecha{max-height: fit-content;
+                   .prime{display: none;}
+                  .terce{grid-column: span 4;
+                            object-fit: cover;
+                           .france{display: none;}
+                   }
+           }
+           h6{display: inline-block;
+            color: #df991b;
+            font-family: Brandon;
+            font-size: 25px;
+            padding: 10px;
+           }
+           .arro{
+            display: inline-block;
+            width: 8vw;
+            height: 8vw;
+            align-self: center;
+        }
+           h4, h2{display: none;}
+           .terce{grid-column: span 2;
+           }
+   }
+
+   .pre, .nex, .vie{display: none;}
+
+
+
+   .centro{margin-left: 2vw;
+    height: fit-content;
+           .gallery{font-size: 25px;
+            text-align: left;
+            margin-bottom: 2vw;
+           }
+           .proper{display: none;}
+           h2{text-align: left;
+            font-size: 35px;
+            font-family: Regalregular;
+           }
+   }
+
+
+   section{display: inline;
+    .sevan{display: none;}
+           .vienen{display: inline;
+                    padding: 1vw 0;
+                   }
+           h5, h4{display: none;}
+    .sala{position: relative;
+            .englanddos{position: absolute;
+                    top: 20%;
+                    left: 17%;
+                    color: #ffffff;
+                   }
+            h6{font-size: 20px;
+                    font-family: Regalregular;
+                   }
+            h2{font-size: 30px;
+                    padding: 40px 0;
+                    font-family: Regalblack;
+                   }
+           }
+   }
+
+    .redes_wrapper{
+    align-items: center;
+    justify-content: center;
+    }
+    .redes{
+        padding-left: 0vw;
+        padding-right: 0vw;
+        justify-content: center;
+        border-bottom: solid 2px;
+        
+    }
+    .red{
+    height: 6vw;
+}
+.red_linkedin{
+    height: 4.5vw;
+}
+.red_fb{
+    height: 7vw;
+}
+#rayita_redes{
+    display: none;
+    
+}
+
+
+
+footer{margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+           .gris{display: none;}
+           .negra{.copy{display: none;}
+                    width: 80%;
+                   .pie{grid-template-columns: 1fr 1fr;
+                            margin-left: -5vw;
+                           .be{grid-column: span 2;
+                            font-size: 20px;
+                            padding-top: 8vw;
+                            padding-bottom: 3vw;
+                           }
+                           .su{justify-self: left;
+                            font-size: 25px;
+                            .space{margin-top: 0;}
+                           }
+                           .ho{justify-self: left;
+                                    font-size: 20px;
+                                    margin-top: 2vw;
+                                   .space{margin-top: 0;}
+                                   span{font-size: 20px;
+                                            color: #b4b7b7;
+                                           }
+                                   } 
+                                  span{font-size: 25px;
+                                    color: #ffffff;
+                                   }
+                           .ca{grid-column: span 2;
+                            align-self: center;
+                            justify-self: baseline;
+                            text-align: left;
+                            padding-bottom: 2vw;
+                            font-size: 22px;
+                            .call{display: none;}
+                            
+                           }
+                   }
+           }
+   }
+}
